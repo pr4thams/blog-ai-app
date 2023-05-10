@@ -11,4 +11,4 @@ if (process.env.NODE_ENV === "production") {
     prismaInit = (global as any).prisma;
 }
 
-expost const prisma = prismaInit;
+export const prisma = prismaInit;
