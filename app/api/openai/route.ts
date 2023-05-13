@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { Configuration, OpenAIApi, CreateChatCompletionResponse } from "openai";
+import { Configuration, CreateChatCompletionResponse, OpenAIApi } from "openai";
 import { AxiosResponse } from "axios";
 
 const configuration = new Configuration({
@@ -7,7 +7,7 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 
-export async function POST(request: Request) {
+export async function POST(request: Request, response: any) {
   try {
     const { title, role } = await request.json();
 
@@ -17,14 +17,14 @@ export async function POST(request: Request) {
         messages: [
           {
             role: "user",
-            content: `Create a 3 line blog post with html tags based on this title: ${title}`,
             // content: `Create small blog post with html tags based on this title: ${title}`,
+            content: `Create 3 line blog post with html tags based on this title: ${title}`,
           },
           {
             role: "system",
             content: `${
               role || "I am a helpful assistant"
-            }.Write with html tags.`,
+            }. Write with html tags.`,
           },
         ],
       });
