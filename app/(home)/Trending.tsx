@@ -38,7 +38,7 @@ const TrendingCard = ({ className, post }: TrendingCardProps) => {
   );
 };
 
-type props = {
+type Props = {
   trendingPosts: Array<Post>;
 };
 
