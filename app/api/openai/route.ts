@@ -11,23 +11,22 @@ export async function POST(request: Request, response: any) {
   try {
     const { title, role } = await request.json();
 
-    const aiResponse: AxiosResponse<CreateChatCompletionResponse, any> =
-      await openai.createChatCompletion({
-        model: "gpt-3.5-turbo",
-        messages: [
-          {
-            role: "user",
-            // content: `Create small blog post with html tags based on this title: ${title}`,
-            content: `Create 3 line blog post with html tags based on this title: ${title}`,
-          },
-          {
-            role: "system",
-            content: `${
-              role || "I am a helpful assistant"
-            }. Write with html tags.`,
-          },
-        ],
-      });
+    const aiResponse = await openai.createChatCompletion({
+      model: "gpt-3.5-turbo",
+      messages: [
+        {
+          role: "user",
+          // content: `Create small blog post with html tags based on this title: ${title}`,
+          content: `Create 3 line blog post with html tags based on this title: ${title}`,
+        },
+        {
+          role: "system",
+          content: `${
+            role || "I am a helpful assistant"
+          }. Write with html tags.`,
+        },
+      ],
+    });
 
     return NextResponse.json(
       {
