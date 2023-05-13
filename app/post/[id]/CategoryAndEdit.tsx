@@ -1,6 +1,7 @@
 import { FormattedPost } from "@/app/types";
 import { PencilSquareIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import React from "react";
+import { Editor } from "@tiptap/react";
 
 type Props = {
   isEditable: boolean;
