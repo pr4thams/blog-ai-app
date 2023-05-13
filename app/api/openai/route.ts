@@ -17,8 +17,7 @@ export async function POST(request: Request) {
         messages: [
           {
             role: "user",
-            content:
-              `Create a 3 line blog post with html tags based on this title: ${title}`,
+            content: `Create a 3 line blog post with html tags based on this title: ${title}`,
             // content: `Create small blog post with html tags based on this title: ${title}`,
           },
           {
