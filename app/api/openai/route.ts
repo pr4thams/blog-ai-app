@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { Configuration, OpenAIApi } from "openai";
+import { Configuration, OpenAIApi, CreateChatCompletionResponse } from "openai";
 import { AxiosResponse } from "axios";
 
 const configuration = new Configuration({
@@ -30,7 +30,6 @@ export async function POST(request: Request) {
         ],
       });
 
-    // response.revalidate("/api/posts");
     return NextResponse.json(
       {
         content: aiResponse.data.choices[0].message?.content,
