@@ -1,17 +1,12 @@
 # AI Blog App
 
-### Find the deployed app here &rarr; [blog-ai-app](https://blog-ai-app-three.vercel.app/)
+Explore the future of blogging with [blog-ai-app](https://blog-ai-app-three.vercel.app/), a revolutionary application designed using the latest NEXT.js 13. This app integrates the OpenAI API to generate compelling blog content, offering users the flexibility to further edit and style their blog posts. Developed to explore the powerful server-side rendering capabilities of NEXT.js, this application delivers efficient, dynamic content.
 
-<br/>
-A blog app of the future made with the latest NEXT.js 13. It harnesses the OpenAI API to generate blogs and allows for further editing and styling of the blog by the user. I developed the app to experience the server-side rendering of the components which is made possible through NEXT.js. 
+## Key Technologies:
 
-<br/>
-
-### Technologies Used:
-
-- NEXT.js
-- Tailwind CSS
-- MySQL
-- Prisma
-- OpenAI API
-- TipTap
+- **NEXT.js**: For enabling server-side rendering and efficient, scalable app development.
+- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+- **MySQL**: Used as the relational database for storing data.
+- **Prisma**: An open-source database toolkit, for easier database management.
+- **OpenAI API**: Incorporated for generating dynamic, AI-powered blog content.
+- **TipTap**: A headless, extensible, browser-based rich text editor.
